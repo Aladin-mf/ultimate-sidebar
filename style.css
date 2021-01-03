@@ -1,0 +1,106 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+.sidebar {
+  position: fixed;
+  left: -250px;
+  height: 100%;
+  background: #042331;
+  width: 250px;
+  -webkit-transition: all .25s ease;
+  transition: all .25s ease;
+}
+
+.sidebar header {
+  font-size: 22px;
+  color: white;
+  text-align: center;
+  line-height: 70px;
+  background: #133e52;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.sidebar ul li a {
+  display: block;
+  height: 100%;
+  width: 100%;
+  line-height: 65px;
+  font-size: 25px;
+  color: white;
+  padding-left: 40px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid black;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.sidebar ul li a:hover {
+  padding-left: 60px;
+}
+
+.sidebar ul li a i {
+  margin-right: 15px;
+}
+
+#check {
+  display: none;
+}
+
+#btn, #cancel {
+  position: absolute;
+  background-color: #042331;
+  border-radius: 5PX;
+  cursor: pointer;
+}
+
+#btn {
+  left: 40px;
+  top: 25px;
+  font-size: 35px;
+  color: white;
+  padding: 5px 10px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+#cancel {
+  z-index: 111;
+  left: -200px;
+  font-size: 30px;
+  top: 17px;
+  color: white;
+  padding: 4px 9px;
+  -webkit-transition: all .2s ease;
+  transition: all .2s ease;
+}
+
+#check:checked ~ .sidebar {
+  left: 0;
+}
+
+#check:checked ~ label #btn {
+  left: 250px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+#check:checked ~ label #cancel {
+  left: 200px;
+}
+
+section {
+  background: url(c5.jpg) no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+}
+/*# sourceMappingURL=style.css.map */
